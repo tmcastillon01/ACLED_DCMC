@@ -438,6 +438,49 @@
       .nav-cta { display: none; }
     }
 
+
+    /* ─── CAMPAIGN CARDS ─────────────────────────────────────── */
+    .camp-list { display: flex; flex-direction: column; gap: 1.6rem; }
+    .camp {
+      display: grid; grid-template-columns: 320px 1fr;
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: 12px; overflow: hidden;
+      box-shadow: 0 6px 24px rgba(0,33,71,0.06);
+    }
+    .camp-side { background: var(--sage); color: var(--white); padding: 2rem 1.8rem; }
+    .camp-num {
+      font-family: 'Space Mono', monospace; font-size: 2.4rem; font-weight: 700;
+      color: var(--gold); line-height: 1; margin-bottom: 0.9rem;
+    }
+    .camp-title { font-family: 'DM Serif Display', serif; font-size: 1.3rem; line-height: 1.25; margin-bottom: 0.9rem; }
+    .camp-title a { text-decoration: underline; text-underline-offset: 3px; }
+    .camp-role {
+      display: inline-block; font-size: 0.74rem; letter-spacing: 0.03em;
+      padding: 0.3rem 0.7rem; border-radius: 999px;
+      background: rgba(255,255,255,0.12); margin-bottom: 1.1rem;
+    }
+    .camp-obj { font-size: 0.85rem; line-height: 1.6; color: rgba(255,255,255,0.78); }
+    .camp-obj b { display: block; font-family: 'Space Mono', monospace; font-size: 0.66rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.3rem; font-weight: 400; }
+    .camp-main { padding: 1.8rem 2rem; display: flex; flex-direction: column; gap: 1.3rem; }
+    .camp-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 0.8rem; }
+    .camp-stat { background: var(--sage-lt); border-radius: var(--radius); padding: 0.9rem 1rem; }
+    .camp-stat-num { font-family: 'Space Mono', monospace; font-size: 1.45rem; font-weight: 700; color: var(--sage); line-height: 1.1; }
+    .camp-stat-lbl { font-size: 0.74rem; color: var(--muted); line-height: 1.35; margin-top: 0.3rem; }
+    .camp-row { display: grid; grid-template-columns: 88px 1fr; gap: 0.8rem; align-items: start; }
+    .camp-lbl { font-family: 'Space Mono', monospace; font-size: 0.66rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); padding-top: 0.25rem; }
+    .camp-text { font-size: 0.86rem; color: var(--ink); line-height: 1.55; }
+    .camp-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .camp-chip { font-size: 0.74rem; padding: 0.22rem 0.65rem; border: 1px solid var(--border); border-radius: 999px; color: var(--sage); background: var(--fog); }
+    .camp-ul { list-style: none; padding: 0; }
+    .camp-ul li { font-size: 0.85rem; color: var(--muted); padding: 0.15rem 0 0.15rem 1.1rem; position: relative; line-height: 1.5; }
+    .camp-ul li::before { content: '→'; position: absolute; left: 0; color: var(--sage); font-size: 0.78rem; }
+    .camp-note { font-size: 0.78rem; color: var(--muted); font-style: italic; }
+    @media (max-width: 900px) {
+      .camp { grid-template-columns: 1fr; }
+      .camp-main { padding: 1.4rem; }
+      .camp-row { grid-template-columns: 1fr; gap: 0.3rem; }
+    }
+
     /* Role fit: 3 cards per row */
     #rolefit .pub-grid { grid-template-columns: repeat(3, 1fr); }
     @media (max-width: 900px) { #rolefit .pub-grid { grid-template-columns: 1fr; } }
@@ -572,29 +615,84 @@
 <!-- CAMPAIGNS -->
 <section id="campaigns" class="reveal">
   <p class="section-eyebrow">Campaign Examples</p>
-  <h2 class="section-title">Campaigns &amp; Digital Projects</h2>
-  <p class="section-sub">Four examples, each with my role, audience, channels and results. Results are mostly reach, adoption and participation.</p>
-  <div class="pub-grid">
-    <div class="pub-card">
-      <div class="pub-title">UNHCR Global Protection Cluster: Social Media Growth and Digital Platform</div>
-      <div class="pub-venue">Communications &amp; Advocacy Intern · Sep 2022 – May 2023</div>
-      <div class="pub-scope"><strong>Audience:</strong> protection actors across 15 global operations (including conflict-affected contexts), humanitarian partners, general public. <strong>Channels:</strong> LinkedIn, X/Twitter, Drupal website, Mailchimp newsletters. <strong>Results:</strong> LinkedIn organic followers up 109.7%, 652 new X/Twitter followers in six months, 124,373+ engagements; materials and toolkits for 20+ campaigns. All organic.</div>
-    </div>
-    <div class="pub-card">
-      <div class="pub-title">Local Government Academy: National Online Training and Coaching Series</div>
-      <div class="pub-venue">Project Officer · Nov 2019 – Sep 2020</div>
-      <div class="pub-scope"><strong>Audience:</strong> 300+ newly elected local officials (online programmes); 500+ local leaders per live session. <strong>Channels:</strong> online learning platforms, live virtual sessions, partner agency networks for invitations and promotion. <strong>Results:</strong> 5 national online programmes; 20 live sessions with 10,000+ cumulative attendances (not unique individuals).</div>
-    </div>
-    <div class="pub-card">
-      <div class="pub-title">World Meteorological Organization: Intranet Adoption and Engagement Campaign</div>
-      <div class="pub-venue">KIM Intern, then Support Officer · May 2023 – Oct 2024</div>
-      <div class="pub-scope"><strong>Audience:</strong> WMO headquarters and regional staff segmented by department and role, plus members of 12 Communities of Practice. <strong>Channels:</strong> segmented Mailchimp sequences, SharePoint portals, multi-platform training webinars, intranet news. <strong>Results:</strong> 80%+ staff reach (session attendance and active portal logins), fewer IT support tickets, participation across 12 networks up 20%.</div>
-    </div>
-    <div class="pub-card">
-      <div class="pub-title"><a href="https://timothycastillon.com" target="_blank" rel="noopener">Personal Web Platform &amp; Data Portfolio</a></div>
-      <div class="pub-venue">Sole designer, developer and content architect</div>
-      <div class="pub-scope"><strong>What it is:</strong> a self-built site combining climate-migration research, JSON datasets and documentary field photography, started as an academic capstone and kept up since. <strong>Channels:</strong> HTML/CSS, JavaScript, GitHub Pages. This is a demonstration of self-taught web and data skills, not a performance campaign, and it has no audience metrics.</div>
-    </div>
+  <h2 class="section-title">Digital Campaigns &amp; Projects</h2>
+  <p class="section-sub">Five examples with my role, audience, channels and results. Outcomes are mostly reach, adoption and participation rather than revenue.</p>
+  <div class="camp-list">
+    <article class="camp">
+      <div class="camp-side">
+        <div class="camp-num">01</div>
+        <h3 class="camp-title">UNHCR Global Protection Cluster: Social Media Growth and Digital Platform</h3>
+        <div class="camp-role">Communications &amp; Advocacy Intern · Sep 2022 – May 2023</div>
+        <p class="camp-obj"><b>Objective</b>Expand the reach of protection information among humanitarian actors in conflict-affected operations.</p>
+      </div>
+      <div class="camp-main">
+        <div class="camp-stats"><div class="camp-stat"><div class="camp-stat-num">109.7%</div><div class="camp-stat-lbl">LinkedIn organic follower growth</div></div><div class="camp-stat"><div class="camp-stat-num">652</div><div class="camp-stat-lbl">new X/Twitter followers in 6 months</div></div><div class="camp-stat"><div class="camp-stat-num">124,373+</div><div class="camp-stat-lbl">total social media engagements</div></div><div class="camp-stat"><div class="camp-stat-num">20+</div><div class="camp-stat-lbl">advocacy campaigns supported</div></div></div>
+        <div class="camp-row"><div class="camp-lbl">Audience</div><div class="camp-text">Protection actors across 15 global operations (including conflict-affected contexts), humanitarian partners, general public</div></div>
+        <div class="camp-row"><div class="camp-lbl">Channels</div><div class="camp-chips"><span class="camp-chip">LinkedIn</span><span class="camp-chip">X/Twitter</span><span class="camp-chip">Drupal website</span><span class="camp-chip">Mailchimp</span><span class="camp-chip">Trello</span></div></div>
+        <div class="camp-row"><div class="camp-lbl">What I did</div><ul class="camp-ul"><li>Primary focal point for the public Drupal site, social accounts and knowledge base, with minimal day-to-day supervision</li><li>Uploaded 300+ materials; kept 15 Areas of Focus pages current and Protection Risk pages updated quarterly</li><li>Designed and sent newsletters, including 3 Human Rights Engagement editions</li><li>Created 30+ banners, edited 4 campaign videos, laid out reports and toolkits (Adobe Creative Cloud, Canva)</li></ul></div>
+        <p class="camp-note">Also handled design and production of the GPC Annual Report and Thematic Forum Report. Written content came from protection officers and team members.</p>
+      </div>
+    </article>
+    <article class="camp">
+      <div class="camp-side">
+        <div class="camp-num">02</div>
+        <h3 class="camp-title">Local Government Academy: National Online Training and Coaching Series</h3>
+        <div class="camp-role">Project Officer · Nov 2019 – Sep 2020</div>
+        <p class="camp-obj"><b>Objective</b>Keep local government leaders informed on the COVID-19 response as it changed quickly, and keep training going for newly elected officials.</p>
+      </div>
+      <div class="camp-main">
+        <div class="camp-stats"><div class="camp-stat"><div class="camp-stat-num">10,000+</div><div class="camp-stat-lbl">cumulative attendances (not unique individuals)</div></div><div class="camp-stat"><div class="camp-stat-num">20</div><div class="camp-stat-lbl">live executive coaching sessions</div></div><div class="camp-stat"><div class="camp-stat-num">5</div><div class="camp-stat-lbl">national online programmes</div></div><div class="camp-stat"><div class="camp-stat-num">3–4</div><div class="camp-stat-lbl">sessions a week for about six months</div></div></div>
+        <div class="camp-row"><div class="camp-lbl">Audience</div><div class="camp-text">300+ newly elected local officials (online programmes); local leaders at live sessions; partners across national agencies, development organizations and academia</div></div>
+        <div class="camp-row"><div class="camp-lbl">Channels</div><div class="camp-chips"><span class="camp-chip">Online learning platforms</span><span class="camp-chip">Live virtual sessions</span><span class="camp-chip">Partner agency networks</span></div></div>
+        <div class="camp-row"><div class="camp-lbl">What I did</div><ul class="camp-ul"><li>Lead focal point for digital platforms; designed and delivered the 5 asynchronous courses</li><li>Project Lead for the 20 live sessions: planned topics and schedules, coordinated speakers and partners</li><li>Hosted live sessions with open Q&amp;A and reported on participant feedback</li></ul></div>
+        
+      </div>
+    </article>
+    <article class="camp">
+      <div class="camp-side">
+        <div class="camp-num">03</div>
+        <h3 class="camp-title">World Meteorological Organization: Intranet Adoption and Engagement Campaign</h3>
+        <div class="camp-role">KIM Intern, then Support Officer · May 2023 – Oct 2024</div>
+        <p class="camp-obj"><b>Objective</b>Drive staff migration to the new SharePoint intranet while revitalizing internal knowledge-sharing networks.</p>
+      </div>
+      <div class="camp-main">
+        <div class="camp-stats"><div class="camp-stat"><div class="camp-stat-num">80%+</div><div class="camp-stat-lbl">staff reach (session attendance and active portal logins)</div></div><div class="camp-stat"><div class="camp-stat-num">+20%</div><div class="camp-stat-lbl">participation across 12 knowledge-sharing networks</div></div><div class="camp-stat"><div class="camp-stat-num">↓</div><div class="camp-stat-lbl">IT support tickets (no figure tracked)</div></div></div>
+        <div class="camp-row"><div class="camp-lbl">Audience</div><div class="camp-text">All WMO headquarters and regional staff, segmented by department and technical role, plus international members of 12 Communities of Practice</div></div>
+        <div class="camp-row"><div class="camp-lbl">Channels</div><div class="camp-chips"><span class="camp-chip">Segmented Mailchimp sequences</span><span class="camp-chip">SharePoint portals</span><span class="camp-chip">Training webinars</span><span class="camp-chip">Intranet news</span></div></div>
+        <div class="camp-row"><div class="camp-lbl">What I did</div><ul class="camp-ul"><li>Lead focal point for staff adoption campaigns, digital training and Community-of-Practice analytics</li><li>Designed and sent targeted Mailchimp sequences; delivered tiered training by department workflow</li><li>Audited engagement across the Communities of Practice: retired inactive networks, launched priority thematic groups</li><li>Presented campaign performance reports to executive boards</li></ul></div>
+        
+      </div>
+    </article>
+    <article class="camp">
+      <div class="camp-side">
+        <div class="camp-num">04</div>
+        <h3 class="camp-title">UNHCR Global Protection Cluster: Webinars, Forum and Event Support</h3>
+        <div class="camp-role">Communications &amp; Advocacy Intern · Sep 2022 – May 2023</div>
+        <p class="camp-obj"><b>Objective</b>Run reliable online and in-person sessions for the protection community.</p>
+      </div>
+      <div class="camp-main">
+        <div class="camp-stats"><div class="camp-stat"><div class="camp-stat-num">30+</div><div class="camp-stat-lbl">banners created to promote sessions</div></div><div class="camp-stat"><div class="camp-stat-num">All</div><div class="camp-stat-lbl">GPC Zoom and Teams webinars supported</div></div><div class="camp-stat"><div class="camp-stat-num">1</div><div class="camp-stat-lbl">session moderated at the Global Protection Forum</div></div></div>
+        <div class="camp-row"><div class="camp-lbl">Audience</div><div class="camp-text">Protection and humanitarian actors worldwide</div></div>
+        <div class="camp-row"><div class="camp-lbl">Channels</div><div class="camp-chips"><span class="camp-chip">Zoom</span><span class="camp-chip">Microsoft Teams</span><span class="camp-chip">In-person events</span><span class="camp-chip">Email promotion</span></div></div>
+        <div class="camp-row"><div class="camp-lbl">What I did</div><ul class="camp-ul"><li>Provided technical support for all GPC Zoom and Teams webinars and sessions</li><li>Supported the Humanitarian Networks and Partnerships Weeks sessions (April 2023)</li><li>Gave technical and communication support at in-person events</li></ul></div>
+        
+      </div>
+    </article>
+    <article class="camp">
+      <div class="camp-side">
+        <div class="camp-num">05</div>
+        <h3 class="camp-title"><a href="https://timothycastillon.com" target="_blank" rel="noopener">Personal Web Platform &amp; Data Portfolio</a></h3>
+        <div class="camp-role">Sole designer, developer &amp; content architect</div>
+        <p class="camp-obj"><b>Objective</b>Build an independent, data-centric site to showcase development projects, analytics work and documentary visual storytelling.</p>
+      </div>
+      <div class="camp-main">
+        <div class="camp-stats"><div class="camp-stat"><div class="camp-stat-num">Sole</div><div class="camp-stat-lbl">designer, developer and content architect</div></div><div class="camp-stat"><div class="camp-stat-num">Custom</div><div class="camp-stat-lbl">layouts and JSON datasets, no commercial templates</div></div><div class="camp-stat"><div class="camp-stat-num">Live</div><div class="camp-stat-lbl">on GitHub Pages, actively maintained</div></div></div>
+        <div class="camp-row"><div class="camp-lbl">Audience</div><div class="camp-text">International organizations, hiring panels, data professionals and development stakeholders</div></div>
+        <div class="camp-row"><div class="camp-lbl">Channels</div><div class="camp-chips"><span class="camp-chip">HTML5/CSS3</span><span class="camp-chip">JavaScript</span><span class="camp-chip">JSON data</span><span class="camp-chip">GitHub Pages</span></div></div>
+        <div class="camp-row"><div class="camp-lbl">What I did</div><ul class="camp-ul"><li>Launched as an academic capstone, then expanded and maintained as an ongoing project</li><li>Combined climate-migration research and field photography into interactive project showcases</li></ul></div>
+        <p class="camp-note">A demonstration of self-taught web and data skills, not a performance campaign. No audience metrics.</p>
+      </div>
+    </article>
   </div>
 </section>
 
